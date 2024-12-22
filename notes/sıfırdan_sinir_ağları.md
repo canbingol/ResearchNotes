@@ -125,10 +125,9 @@ Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
 
 Gizli katmandan gelen \(Z_1\) ve \(Z_2\) değerleri, çıktı katmanındaki ağırlıklar ve bias kullanılarak işlenir. Aşağıda çıktı katmanı için ağırlıklar ve bias değerleri tablo halinde verilmiştir:
 
-| **Girdi**     | **Ağırlık (w)** | **Bias (b)** |
-|---------------|-----------------|--------------|
-| \(Z_1\)       | -1.2            | 2.1          |
-| \(Z_2\)       | 0.02            |              |
+| **Nöron**           | **Ağırlık \(Z_1\)** | **Ağırlık \(Z_2\)** | **Bias (b)** |
+|----------------------|---------------------|---------------------|--------------|
+| Çıktı Katmanı        | -1.2               | 0.02                | 2.1          |
 
 Hesaplama şu şekilde gerçekleşir:
 
