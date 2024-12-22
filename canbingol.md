@@ -1,1 +1,1 @@
-!(cano)[https://github.com/canbingol/ResearchNotes/blob/main/images/canbingol.jpeg]
+![cano](https://github.com/canbingol/ResearchNotes/blob/main/images/canbingol.jpeg)
