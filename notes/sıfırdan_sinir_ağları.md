@@ -28,34 +28,23 @@ Gizli katman için kullanılan ağırlıklar ve bias değerleri aşağıdaki tab
 
 | **Katman**  | **Ağırlıklar (Weights)** | **Bias (b)** |
 |-------------|--------------------------|--------------|
-| Gizli Katman Nöron 1 | \(w_{11} = 0.5\), \(w_{12} = -0.1\) | \(b_1 = 0.2\) |
-| Gizli Katman Nöron 2 | \(w_{21} = 0.3\), \(w_{22} = 0.6\) | \(b_2 = 0.3\) |
+| Gizli Katman Nöron 1 | w11 = 0.5, w12 = -0.1 | b1 = 0.2 |
+| Gizli Katman Nöron 2 | w21 = 0.3, w22 = 0.6  | b2 = 0.3 |
 
 Hesaplama şu şekilde gerçekleşir:
 
 1. **İlk Nöron (Z1):**
    Girdi değerleri, ağırlıklarla çarpılır ve bias eklenir:
-   \[
-   Z_1 = (x_1 \cdot w_{11}) + (x_2 \cdot w_{12}) + b_1
-   \]
-   \[
-   Z_1 = (1 \cdot 0.5) + (2 \cdot -0.1) + 0.2 = 0.5
-   \]
+   Z1 = (x1 * w11) + (x2 * w12) + b1
+   Z1 = (1 * 0.5) + (2 * -0.1) + 0.2 = 0.5
 
 2. **İkinci Nöron (Z2):**
    Aynı işlem diğer nöron için yapılır:
-   \[
-   Z_2 = (x_1 \cdot w_{21}) + (x_2 \cdot w_{22}) + b_2
-   \]
-   \[
-   Z_2 = (1 \cdot 0.3) + (2 \cdot 0.6) + 0.3 = 1.8
-   \]
+   Z2 = (x1 * w21) + (x2 * w22) + b2
+   Z2 = (1 * 0.3) + (2 * 0.6) + 0.3 = 1.8
 
 Bu adımlar sonucunda gizli katman nöronlarının çıktıları:
-\[
-Z_1 = 0.5, \quad Z_2 = 1.8
-\]
-olarak hesaplanır.
+Z1 = 0.5, Z2 = 1.8
 
 Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
 
@@ -69,19 +58,15 @@ Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
 
 | **Ağırlıklar (Weights)** | **Bias (b)** |
 |---------------------------|--------------|
-| \(w_{31} = -1.2\), \(w_{32} = 0.02\) | \(b_3 = 2.1\) |
+| w31 = -1.2, w32 = 0.02    | b3 = 2.1     |
 
-Gizli katmandan gelen \(Z_1\) ve \(Z_2\) değerleri, çıktı katmanındaki ağırlıklar ve bias kullanılarak işlenir. Hesaplama şu şekildedir:
+Gizli katmandan gelen Z1 ve Z2 değerleri, çıktı katmanındaki ağırlıklar ve bias kullanılarak işlenir. Hesaplama şu şekildedir:
 
-\[
-y = (Z_1 \cdot w_{31}) + (Z_2 \cdot w_{32}) + b_3
-\]
+y = (Z1 * w31) + (Z2 * w32) + b3
 
-Burada \(Z_1\) ve \(Z_2\) değerlerini yerlerine koyarsak:
+Burada Z1 ve Z2 değerlerini yerlerine koyarsak:
 
-\[
-y = (0.5 \cdot -1.2) + (1.8 \cdot 0.02) + 2.1 = 1.536
-\]
+y = (0.5 * -1.2) + (1.8 * 0.02) + 2.1 = 1.536
 
 Sonuç olarak, modelin tahmin ettiği çıktı değeri **1.536** olarak elde edilir. Burada elde edilen değer, modelimizin tahmin ettiği değerdir.
 
@@ -115,7 +100,7 @@ b2 = 0.3
 # gizli katman çıktı hesaplama
 z1 = (x1 * w11) + (x2 * w12) + b1
 z2 = (x1 * w21) + (x2 * w22) + b2
-print(f"z1: {z1} \nz2: {z2}")
+print(f"z1: {z1} \\nz2: {z2}")
 
 # çıktı katmanı ağırlıkarı ve biası
 w31 = -1.2
@@ -125,13 +110,11 @@ b3 = 2.1
 tahmin = (z1 * w31) + (z2 * w32) + b3
 print("Tahmin:", tahmin)
 
-
 # MSE loss hesaplama
 hedef = 2
 mse = (hedef - tahmin) ** 2 
 mse = mse / 1 # burada toplam hedef sayısına bölünür
 print("MSE:", mse)
-```
 ### Çıktı
 
 ```python
