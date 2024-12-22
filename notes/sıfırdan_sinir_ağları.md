@@ -88,7 +88,14 @@ Bir sinir ağının ileri yayılım süreci, girdilerden başlayarak nihai tahmi
 
 ### Gizli Katman İçin İleri Yayılım
 
-Modelimize verilen girdiler [1, 2] olup, bu değerler gizli katman nöronlarına ağırlıklar [[0.5, -0.1], [0.3, 0.6]] ve bias değerleri [0.2, 0.3] ile birlikte işlenir. Hesaplama şu şekilde gerçekleşir:
+Modelimize verilen girdiler `[1, 2]` olup, bu değerler gizli katman nöronlarına ağırlıklar ve bias değerleri ile birlikte işlenir. Aşağıda ağırlıklar ve bias değerleri tablo olarak verilmiştir:
+
+| **Nöron**           | **Ağırlık 1 (w1)** | **Ağırlık 2 (w2)** | **Bias (b)** |
+|----------------------|--------------------|--------------------|--------------|
+| Gizli Katman Nöron 1 | 0.5                | -0.1               | 0.2          |
+| Gizli Katman Nöron 2 | 0.3                | 0.6                | 0.3          |
+
+Hesaplama şu şekilde gerçekleşir:
 
 1. **İlk Nöron (Z1):**
    Girdi değerleri, ağırlıklarla çarpılır ve bias eklenir:
@@ -119,13 +126,13 @@ Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
 Gizli katmandan gelen \(Z_1\) ve \(Z_2\) değerleri, çıktı katmanındaki ağırlıklar ve bias kullanılarak işlenir. Hesaplama şu şekildedir:
 
 
-y = (Z_1 \times -1.2) + (Z_2 \times 0.02) + 2.1
+y = (Z_1 * -1.2) + (Z_2 * 0.02) + 2.1
 
 
 Burada \(Z_1\) ve \(Z_2\) değerlerini yerlerine koyarsak:
 
 
-y = (0.5 \times -1.2) + (1.8 \times 0.02) + 2.1 = 1.536
+y = (0.5 * -1.2) + (1.8 * 0.02) + 2.1 = 1.536
 
 
 Sonuç olarak, modelin tahmin ettiği çıktı değeri **1.536** olarak elde edilir. Burada elde edilen değer, modelimizin tahmin ettiği değerdir.
