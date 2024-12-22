@@ -59,16 +59,15 @@ Bu üç adım, bir sinir ağının öğrenme sürecinin çekirdeğini oluşturur
 #### 3. Toplama İşlemi:
 - Çarpımların sonuçları toplanır ve her bir nöron için bias (*b*) adı verilen bir sabit değer eklenir. Bu işlem, her nöronun aktivasyon öncesindeki toplam girdisini hesaplar:
   
-\[
-z = (w_1 \cdot x_1) + (w_2 \cdot x_2) + \dots + b
-\]
+
+z = (w_1 * x_1) + (w_2 * x_2)  + b
+
 
 #### 4. Aktivasyon Fonksiyonu:
 - Hesaplanan toplam (*z*), bir aktivasyon fonksiyonuna (örneğin, Sigmoid, ReLU gibi) uygulanır. Aktivasyon fonksiyonu, modelin doğrusal olmayan ilişkileri öğrenmesine olanak tanır ve nöronun çıktı değerini belirler:
 
-\[
 y = f(z)
-\]
+
 
 #### 5. Sonraki Katmana Geçiş:
 - Elde edilen çıktı değerleri, ağın bir sonraki katmanına giriş olarak aktarılır. Bu işlem, ağın tüm katmanları boyunca tekrarlanır ve nihai çıktıya ulaşılır.
@@ -93,20 +92,20 @@ Modelimize verilen girdiler [1, 2] olup, bu değerler gizli katman nöronlarına
 
 1. **İlk Nöron (Z1):**
    Girdi değerleri, ağırlıklarla çarpılır ve bias eklenir:
-   \[
-   Z_1 = (1 \times 0.5) + (2 \times -0.1) + 0.2 = 0.5
-   \]
+
+   Z_1 = (1  0.5) + (2  -0.1) + 0.2 = 0.5
+   
 
 2. **İkinci Nöron (Z2):**
    Aynı işlem diğer nöron için yapılır:
-   \[
-   Z_2 = (1 \times 0.3) + (2 \times 0.6) + 0.3 = 1.8
-   \]
+   
+   Z_2 = (1  0.3) + (2  0.6) + 0.3 = 1.8
+   
 
 Bu adımlar sonucunda gizli katman nöronlarının çıktıları:
-\[
-Z_1 = 0.5, \quad Z_2 = 1.8
-\]
+
+Z_1 = 0.5,  Z_2 = 1.8
+
 olarak hesaplanır.
 
 Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
@@ -119,15 +118,15 @@ Bu değerler, ağın bir sonraki katmanına girdi olarak aktarılır.
 
 Gizli katmandan gelen \(Z_1\) ve \(Z_2\) değerleri, çıktı katmanındaki ağırlıklar ve bias kullanılarak işlenir. Hesaplama şu şekildedir:
 
-\[
+
 y = (Z_1 \times -1.2) + (Z_2 \times 0.02) + 2.1
-\]
+
 
 Burada \(Z_1\) ve \(Z_2\) değerlerini yerlerine koyarsak:
 
-\[
+
 y = (0.5 \times -1.2) + (1.8 \times 0.02) + 2.1 = 1.536
-\]
+
 
 Sonuç olarak, modelin tahmin ettiği çıktı değeri **1.536** olarak elde edilir. Burada elde edilen değer, modelimizin tahmin ettiği değerdir.
 
@@ -152,9 +151,9 @@ Loss hesaplamak için birden fazla fonksiyon vardır ve bu fonksiyonlar, problem
 
 Diyelim ki, tahmin etmek istediğimiz değer **2**. Peki, MSE loss nasıl hesaplanır?
 
-\[
-MSE = \frac{1}{N} \sum_{i=1}^N (\text{Hedef} - \text{Tahmin})^2
-\]
+
+MSE =  (1/N) × Σ(Hedef - Tahmin)^2
+
 
 MSE hesaplanırken:
 1. Hedef değerler ile tahmin edilen değerler arasındaki fark hesaplanır.
@@ -164,19 +163,18 @@ MSE hesaplanırken:
 #### Örnek Hesaplama:
 
 1. Tahmin edilen çıktı ile hedef değer arasındaki fark hesaplanır:
-   \[
-   \text{Fark} = 2 - 1.536 = 0.464
-   \]
+   
+    Fark = 2 - 1.536 = 0.464
+   
 
 2. Bu farkın karesi alınır:
-   \[
-   \text{Fark}^2 = (0.464)^2 = 0.215
-   \]
+   
+  Fark^2 = (0.464)^2 = 0.215
 
-3. Tek bir veri noktası için MSE, doğrudan bu değere eşit olur:
-   \[
+4. Tek bir veri noktası için MSE, doğrudan bu değere eşit olur:
+
    MSE = 0.215
-   \]
+   
 
 #### Birden Fazla Veri İçin MSE Hesaplama
 
