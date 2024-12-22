@@ -216,7 +216,7 @@ w32 = 0.02
 b3 = 2.1
 
 tahmin = (z1 * w31) + (z2 * w32) + b3
-print(tahmin)
+print("Tahmin:",tahmin)
 
 
 # MSE loss hesaplama
@@ -231,5 +231,5 @@ print("MSE:", mse)
 ```python
 z1: 0.5 
 z2: 1.8
-1.536
+Tahmin: 1.536
 MSE: 0.215296
