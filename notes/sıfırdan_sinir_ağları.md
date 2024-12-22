@@ -183,7 +183,7 @@ MSE hesaplanırken:
 
 2. Bu farkın karesi alınır:
    
-  Fark^2 = (0.464)^2 = 0.215
+    Fark^2 = (0.464)^2 = 0.215
 
 4. Tek bir veri noktası için MSE, doğrudan bu değere eşit olur:
 
