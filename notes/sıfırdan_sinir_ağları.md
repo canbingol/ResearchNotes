@@ -200,7 +200,7 @@ Eğer model birden fazla veri noktasıyla çalışıyorsa, her bir veri için ta
 
 Aşağıda bir sinir ağında ileri yayılım ve MSE hesaplaması için basit bir Python kodu verilmiştir:
 
-python
+```python
 #girdiler
 x1 = 1
 x2 = 2
@@ -236,11 +236,12 @@ hedef = 2
 mse = (hedef - tahmin) ** 2 
 mse = mse / 1 # burada toplam hedef sayısına bölünür
 print("MSE:", mse)
-
+```
 ### Çıktı
 
-python
+```çıktı
 z1: 0.5 
 z2: 1.8
 Tahmin: 1.536
 MSE: 0.215296
+```
