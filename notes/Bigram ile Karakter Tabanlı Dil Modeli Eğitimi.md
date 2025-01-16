@@ -3,10 +3,12 @@ Doğal Dil İşleme (NLP) alanında dil modelleri, herhangi bir dilde cümleleri
 
 Bu yazıda, dil modelinin en basit örneklerinden biri olan bigram modeli ile karakter tabanlı bir dil modeli geliştireceğiz. Bigram modeli, yalnızca bir öncekikelimeye bakarak “bir sonraki” kelimeyi tahmin etmeye çalışır. Yani, adından da anlaşılacağı gibi, her seferinde iki kelime arasındaki ilişki (bigram) dikkate alınır.
 
-Bu yazıda paylaşacaklarım, ![Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy)’nin YouTube’da yayınladığı “Neural Networks: Zero to Hero” serisinden öğrendiklerime dayanmaktadır. Derin öğrenme ve yapay zeka konularında daha derinlemesine bilgi edinmek isteyenler için bu seriyi mutlaka izlemenizi tavsiye ederim.
+Bu yazıda paylaşacaklarım, [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy)'nin YouTube’da yayınladığı “Neural Networks: Zero to Hero” serisinden öğrendiklerime dayanmaktadır. Derin öğrenme ve yapay zeka konularında daha derinlemesine bilgi edinmek isteyenler için bu seriyi mutlaka izlemenizi tavsiye ederim.
+
 
 # 1. Bigram Modeli Nedir?
 Bigram modeli, bir metindeki tokenlerin sırasını inceleyerek, her token için bir önceki tokene bağlı bir olasılık belirler. Bunu formül olarak şu şekilde gösterebiliriz:
+
 ![formula](https://github.com/canbingol/ResearchNotes/blob/main/images/formula.jpg)
 
 Metnin bütününü ifade eden bir dizi kelimenin (örneğin, “Merhaba dünya nasılsınız”) olasılığı, birbirini izleyen bu ikililerin (bigramların) olasılıklarının çarpımıyla hesaplanır. Model, “Merhaba”dan sonra en sık “dünya” geliyorsa, bu ikilinin olasılığı yüksek olarak kaydedilir.
@@ -28,6 +30,7 @@ warnings.filterwarnings("ignore")
 PyTorch, TensorFlow ile birlikte derin öğrenme alanında en çok kullanılan kütüphanelerden biridir. Veri işleme, veri üzerinde değişiklik yapma ve derin öğrenme modelleri geliştirme konularında oldukça kullanışlıdır. Özellikle yeni başlayanlar için anlaşılır ve esnek bir yapı sunar.
 
 Derin öğrenmeye PyTorch ile başlamak isteyenler için harika bir eğitim öneriyorum:
+
 [pytroch eğitimi](https://youtu.be/V_xro1bcAuA?si=m7aVxGE-UtzAjskh)
 
 ## 2.2 Veriye İlk Bakış:
