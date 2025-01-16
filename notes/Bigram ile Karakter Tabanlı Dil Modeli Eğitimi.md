@@ -31,7 +31,7 @@ PyTorch, TensorFlow ile birlikte derin öğrenme alanında en çok kullanılan k
 
 Derin öğrenmeye PyTorch ile başlamak isteyenler için harika bir eğitim öneriyorum:
 
-[pytroch eğitimi](https://youtu.be/V_xro1bcAuA?si=m7aVxGE-UtzAjskh)
+[PyTorch for Deep Learning & Machine Learning – Full Course](https://youtu.be/V_xro1bcAuA?si=m7aVxGE-UtzAjskh)
 
 ## 2.2 Veriye İlk Bakış:
 Veri seti olarak küçük bir Shakespeare veriseti kullanacağız.
